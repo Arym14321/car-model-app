@@ -1,0 +1,25 @@
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heder-container{
+    display: flex;
+    justify-content: flex-end;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-data{
+    width: 90%;
+}
+img{
+    width: 36px;
+    height: 36px;
+}
+.form-container{
+    width: 70%;
+}

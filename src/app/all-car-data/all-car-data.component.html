@@ -1,0 +1,23 @@
+<h3>{{errorMsg}}</h3>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Car Name</th>
+      <th>Car Model</th>
+    </tr>
+  </thead>
+  <tbody  *ngFor="let data of carData">
+    <tr>
+      <td>{{data.carName}}</td>
+      <td>{{data.carModel}}</td>
+      <td><img (click)="delete(data.id)" src="../../assets/images/delete-icon.png"></td>
+      <td><img (click)="edit(data.id)" src="../../assets//images/edit-icon.png"></td>
+    </tr>
+  </tbody>
+</table>
+<div class="div-add-button">
+  <button class="add-button" mat-raised-button color="primary" (click)="add()">
+    <span class="button-title">Add Car Details</span><img src="../../assets/images/add-button-hi.png">
+  </button>
+</div>
+<router-outlet></router-outlet>

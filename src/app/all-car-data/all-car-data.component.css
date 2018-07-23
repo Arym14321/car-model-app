@@ -1,0 +1,18 @@
+img{
+    width: 36px;
+}
+.add-button{
+    width: 200px;
+    background: #337ab7;
+    border-radius: 8px;
+    border: none;
+}
+.div-add-button{
+    display: flex;
+    justify-content: center;
+}
+.button-title{
+    font-size: 17px;
+    color: white;
+    margin-right: 5px;
+}

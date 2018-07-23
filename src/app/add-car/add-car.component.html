@@ -1,0 +1,22 @@
+<div class="main-container">
+  <!-- <div class="header">
+    <img class="close-popup-button" src="../../assets/images/close.png">
+  </div> -->
+  <h3 class="heading">Car Data</h3>
+  <h3>{{errorMsg}}</h3>
+  <form class="form" [formGroup]="formGroup" (ngSubmit)="saveData(formGroup.value)">
+    <mat-form-field >
+      <input matInput placeholder="Car id" type="number" formControlName="id" required>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Car Name" formControlName="carName" required>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Car Model" formControlName="carModel" required>
+    </mat-form-field>
+    <button class="add-button" mat-raised-button color="primary">Primary</button>
+    <!-- <button type="button" class="btn btn-primary mrg-10">Save</button> -->
+  </form>
+</div>

@@ -1,0 +1,14 @@
+{
+  "car-data": [
+    {
+      "carName": "TATA",
+      "carModel": "Safari",
+      "id": 1233
+    },
+    {
+      "carName": "Mercedes",
+      "carModel": "Benz A-Class",
+      "id": 34
+    }
+  ]
+}
