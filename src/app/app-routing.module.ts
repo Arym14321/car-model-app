@@ -14,7 +14,7 @@ const routes: Routes = [
     loadChildren: './add-car/add-car.module#AddCarModule'
   },
   {
-    path: 'edit-car',
+    path: 'edit-car/:carId',
     loadChildren: './edit-car/edit-car.module#EditCarModule'
   },
 ];

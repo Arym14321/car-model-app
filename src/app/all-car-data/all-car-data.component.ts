@@ -33,6 +33,6 @@ export class AllCarDataComponent implements OnInit {
   }
   
   edit(carId) {
-    this.router.navigate(['/edit-car', { carId: carId}]);
+    this.router.navigate(['/edit-car',carId]);
   }
 }
