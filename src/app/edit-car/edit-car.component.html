@@ -6,10 +6,10 @@
     <form class="form">
      <div>
       <mat-form-field class="form-data">
-        <input matInput placeholder="Car Name" value="{{datas.carName}}" [(ngModel)]="datas.carName" [ngModelOptions]="{standalone: true}">
+        <input matInput placeholder="Car Name" [(ngModel)]="datas.carName" name="carName">
       </mat-form-field>
       <mat-form-field class="form-data">
-          <input matInput placeholder="Car Model" value="{{datas.carModel}}" [(ngModel)]="datas.carModel" [ngModelOptions]="{standalone: true}">
+          <input matInput placeholder="Car Model" [(ngModel)]="datas.carModel" name="carModel">
       </mat-form-field>
      </div>
         <button mat-raised-button color="primary" (click)="saveInfo()">Save</button>

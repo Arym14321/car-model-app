@@ -9,16 +9,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./add-car.component.css']
 })
 export class AddCarComponent implements OnInit {
-
   formGroup: FormGroup;
-  carData: any=[];
-  AllCarData: any;
   constructor(private formBuilder: FormBuilder,private service: CarDataService,private router: Router) { }
-  datas: any;
-  errorMsg: String;
+
   ngOnInit() {
     this.buildForm();
   }
+
   buildForm(): void {
     this.formGroup = this.formBuilder.group({
       id: ['', [Validators.required]],
@@ -26,9 +23,9 @@ export class AddCarComponent implements OnInit {
       carModel: ['', [Validators.required]],
     });
   }
+
   saveData(data){
     console.log('data',data);
     this.service.addCarData(data).subscribe(res=>{})
   }
-
 }

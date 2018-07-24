@@ -16,6 +16,9 @@ export class EditCarComponent implements OnInit {
   }
   replaceData: any = [];
   constructor(private service: CarDataService, private activatedRoute: ActivatedRoute) {
+  }
+
+  ngOnInit() {
     this.activatedRoute.params.subscribe(res => {
       this.carId = parseInt(res.carId)
       this.service.getDataOnId(this.carId).subscribe(res => {
@@ -23,17 +26,10 @@ export class EditCarComponent implements OnInit {
         this.datas.carName = this.replaceData.carName;
         this.datas.carModel = this.replaceData.carModel;
       })
-
     })
   }
-
-  ngOnInit() {
-
-  }
+  
   saveInfo() {
-
-    this.service.editCarData(this.carId, this.datas).subscribe(res => {
-
-    })
+    this.service.editCarData(this.carId, this.datas).subscribe(res => {})
   }
 }

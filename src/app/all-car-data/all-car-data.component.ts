@@ -9,23 +9,21 @@ import { Router } from '@angular/router';
 })
 export class AllCarDataComponent implements OnInit {
   carData: any = [];
-  errorMsg: String;
   constructor(private service: CarDataService, private router: Router) {
+  }
+
+  ngOnInit() {
     this.service.allCarData().subscribe(res => {
       this.carData = res
     })
   }
 
-  ngOnInit() {
-   
-
-  }
   add() {
     this.router.navigate(['/add-car'])
   }
+
   delete(carId) {
     this.service.deleteCaraData(carId).subscribe(res => {
-      console.log('res ', res);
       if(res.status === 200){
         this.service.allCarData().subscribe(res => {
           this.carData = res
@@ -33,7 +31,8 @@ export class AllCarDataComponent implements OnInit {
       }
     })
   }
-  edit(carId, carName, carModel) {
-    this.router.navigate(['/edit-car', { carId: carId }]);
+  
+  edit(carId) {
+    this.router.navigate(['/edit-car', { carId: carId}]);
   }
 }
